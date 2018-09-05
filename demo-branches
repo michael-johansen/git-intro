@@ -1,13 +1,3 @@
-<<<<<<< Updated upstream
-#!/bin/bash
-
-# List config for repository (from .git/config)
-git config --local --list 
-# List config for user (from ~/.gitconfig)
-git config --global --list
-# List config for user (from $GIT_INSTALL_DIR/gitconfig)
-git config --system --list
-=======
 #!/bin/bash -x
 git checkout -b red
 git checkout -b blue
@@ -36,5 +26,3 @@ read -p "oh.. no we should have added some blue first. Let's fix that"
 # Usually we would pull from origin instead of . (local)
 git pull . blue --rebase
 
-
->>>>>>> Stashed changes
