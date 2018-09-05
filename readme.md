@@ -2,10 +2,10 @@
 
 ## Best practices
 - autoSquash + --fixup
--- git rebase <origin> <branch> --interactive --autosquash
--- git config --global alias.rbi "rebase --interactive" 
--- git config --global rebase.autosquash true 
--- git rbi <origin> <branch> 
+  - git rebase <origin> <branch> --interactive --autosquash
+  - git config --global alias.rbi "rebase --interactive" 
+  - git config --global rebase.autosquash true 
+  - git rbi <origin> <branch> 
 
 ## Know your git configuration
 
