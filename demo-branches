@@ -23,9 +23,7 @@ git mv yellow green
 git commit --fixup=:/green
 read -p "oh.. no we should have added some blue first. Let's fix that"
 
-git config --global rebase.autosqash true
-read -p "Now we will automatically squash --fixup commits"
 
-# Usually we would pull from origin instead of . (local)
-git pull . blue --rebase=interactive
+
+
 
