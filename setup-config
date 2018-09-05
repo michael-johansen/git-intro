@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 #!/bin/bash
 
 # List config for repository (from .git/config)
@@ -6,3 +7,34 @@ git config --local --list
 git config --global --list
 # List config for user (from $GIT_INSTALL_DIR/gitconfig)
 git config --system --list
+=======
+#!/bin/bash -x
+git checkout -b red
+git checkout -b blue
+read -p "Press [Enter] key to continue "
+
+touch blue
+git add blue
+git commit -m "needed some blue"
+read -p "Press [Enter] key to continue "
+
+git checkout red
+read -p "Press [Enter] key to continue "
+
+touch red
+git add red
+git commit -m "needed some red"
+touch yellow 
+git add yellow
+git commit -m "needed some green"
+read -p "uh oh.. yellow was supposed to be green. Let's fix that"
+
+git mv yellow green
+git commit --fixup=:/green
+read -p "oh.. no we should have added some blue first. Let's fix that"
+
+# Usually we would pull from origin instead of . (local)
+git pull . blue --rebase
+
+
+>>>>>>> Stashed changes

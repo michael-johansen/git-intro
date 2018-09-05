@@ -1,4 +1,7 @@
-# Git best practices
+# Git right
+
+## Best practices
+- autoSquash + --fixup
 
 ## Know your git configuration
 
@@ -17,7 +20,30 @@ git config --global --list
 git config --system --list
 ```
 
+## fatal: The current branch dev has no upstream branch.
 
+Tired of:
 
+```
+~/git/git-intro  on  dev △  $ git push
+fatal: The current branch dev has no upstream branch.
+To push the current branch and set the remote as upstream, use
 
+    git push --set-upstream origin dev
+```
 
+then do: 
+
+```
+git config --global push.default true
+
+```
+## --fixup
+
+```
+git
+```
+
+## References
+https://www.praqma.com/stories/git-autostash/
+https://robots.thoughtbot.com/autosquashing-git-commits
